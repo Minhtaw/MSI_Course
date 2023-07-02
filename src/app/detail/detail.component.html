@@ -1,0 +1,31 @@
+<div class="bg">
+  <div class="container-fluid">
+    <a href="#" class="course-outlin__back">
+      <img class="img2" src="../assets/left.png " alt="">
+    </a>
+    <br>
+    <br>
+    <br>
+
+  </div>
+
+  <div class="course-info">
+    <img class="img" src="{{ lecture.img_url }}" alt="Course Image">
+    <h1>{{ lecture.title }}</h1>
+    <ul class="Overview">
+      <li><strong>Overview ==> </strong><i>{{ lecture.description }}</i></li>
+      <li><strong>Duration ==> </strong><i>{{ lecture.duration }}</i></li>
+      <li><strong>Fee ==> </strong><i>{{ lecture.fee }}</i></li>
+    </ul>
+  </div>
+
+
+  <div class="course-outline">
+    <h2><strong>Course Outline</strong></h2>
+    <p class="list-group-item">{{ lecture.course_outline }}</p>
+  </div>
+
+  <br>
+  <br>
+  
+</div>

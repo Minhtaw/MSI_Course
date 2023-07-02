@@ -1,0 +1,90 @@
+<!-- <div class="nav"*ngFor="let lecture of classes">
+  <figure>
+    <div class="photo-container">
+      <img class="img center" [src]="lecture.img_url" alt="Course Image">
+    </div>
+
+    <div>
+      <h2>{{ lecture.title }}</h2>
+    </div>
+
+    <div>
+      <h6>{{ lecture.course_outline }}</h6>
+    </div>
+
+    <div class="corner-container">
+      <h6 class="corner-text">{{ lecture.duration }}</h6>
+      <h6 class="corner-text">{{ lecture.fee }}</h6>
+    </div>
+
+    <a class="card__link" [routerLink]="'/product/' + lecture.id">
+      <span>Detail <i class="emoji-right">👉</i></span>
+    </a>
+  </figure>
+</div> -->
+
+<!-- <div class="container">
+  <h1>MSI Course</h1>
+  <div class="row d-flex flex-row mb-3">
+      <div class="card g-col-4 g-col-md-3 g- col-sm-1" *ngFor="let lecture of classes">
+          <img class="card-img-top" src="{{lecture.img_url}}" alt="lecture image">
+          <div class="card-title">{{lecture.title}}</div>
+          <div class="card-text discription">{{lecture.description}}</div>
+          <div class="details">
+              <div class="duration">{{lecture.duration}}</div>
+              <div class="fee">{{lecture.fee}}</div>
+            <button class="btn btn-primary" >
+                <a class="card-link" routerLink="/detail/{{lecture.id}}">
+                        <i class="color">Details </i>
+                        <i class="emoji-right">  👉</i>
+                </a>
+            </button>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+<!-- <div class="container">
+  <h1>MSI Course</h1>
+  <button class="btn btn-primary" *ngFor="let lecture of classes">
+    <a class="card-link" routerLink="/detail/{{lecture.id}}">
+            <i class="color">
+                <div class="row d-flex flex-row mb-3">
+                    <div class="card g-col-4 g-col-md-3 g- col-sm-1">
+                        <img class="card-img-top" src="{{lecture.img_url}}" alt="lecture image">
+                        <div class="card-title">{{lecture.title}}</div>
+                        <div class="card-text discription">{{lecture.description}}</div>
+                        <div class="details">
+                            <div class="duration">{{lecture.duration}}</div>
+                            <div class="fee">{{lecture.fee}}</div>
+                        </div>
+                    </div>
+                </div>
+            </i>
+    </a>
+  </button>
+</div> -->
+
+<!-- still testing -->
+<div class="bg" [ngClass]="{ 'dark-mode': darkMode, 'light-mode': !darkMode }">
+  <h1 class="title">MSI Course</h1>
+  <div>
+    <mat-slide-toggle (change)="toggleDarkMode()">Dark Mode</mat-slide-toggle>
+  </div>
+
+  <div class="container">
+    <div *ngFor="let lecture of classes">
+      <span routerLink="/detail/{{lecture.id}}">
+        <div class="card g-col-4 g-col-md-3 g-col-sm-1">
+          <img class="card-img-top" [src]="lecture.img_url" alt="lecture image">
+          <div class="card-title">{{lecture.title}}</div>
+          <div class="card-text description">{{lecture.description}}</div>
+          <div class="details">
+            <div class="duration">{{lecture.duration}}</div>
+            <div class="fee">{{lecture.fee}}</div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
